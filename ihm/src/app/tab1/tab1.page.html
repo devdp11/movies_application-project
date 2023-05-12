@@ -20,7 +20,8 @@
   <ion-grid [fixed]="true">
     <ion-row class="container_scroll">
         <ion-button size="small">Drama</ion-button>      
-        <ion-button size="small">Action</ion-button>      
+        <ion-button size="small" (click)="goAction()">Action</ion-button>
+
         <ion-button size="small">Comedy</ion-button>      
         <ion-button size="small">Horror</ion-button>      
         <ion-button size="small">Fiction</ion-button>      
@@ -35,7 +36,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+
     </ion-toolbar>
   </ion-header>
 
