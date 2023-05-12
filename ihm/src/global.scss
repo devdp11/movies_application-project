@@ -40,3 +40,10 @@
 	--ion-color-secondary-shade: #242220;
 	--ion-color-secondary-tint: #3e3d3a;
 }
+
+ion-button {
+    --background: #FFB660;
+    ion-icon {
+      margin-right: 8px;
+    }
+}
