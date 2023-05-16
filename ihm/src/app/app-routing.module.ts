@@ -17,7 +17,11 @@ const routes: Routes = [
   {
     path: 'action',
     loadChildren: () => import('./action/action.module').then( m => m.ActionPageModule)
+  },  {
+    path: 'movie',
+    loadChildren: () => import('./movie/movie.module').then( m => m.MoviePageModule)
   }
+
 
   
 ];
