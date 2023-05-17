@@ -1,0 +1,13 @@
+.container-parent{
+	display: grid;
+    padding: 8px;
+	text-align: center;
+	justify-content: center;
+    grid-template-columns: auto;
+}
+
+.container-child{
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}

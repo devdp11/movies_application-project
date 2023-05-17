@@ -1,5 +1,4 @@
 <ion-header [translucent]="true">
-
   <ion-toolbar>
     <ion-title slot="end">
       <ion-button size="small" shape="round">
@@ -7,49 +6,41 @@
             English
       </ion-button>      
     </ion-title>
-    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-  <ion-thumbnail>
-    <img alt="icon" src="assets/icon/totalMovies.png" />
-  </ion-thumbnail>
+  <div class="container-parent">
+    <div class="container-child">
+      <ion-card>
+        <img alt="icon" src="assets/icon/totalMovies.png" />
+      </ion-card>
+    </div>
+  </div>
 
-  Welcome to Total Movie!!
+  <div class="container-parent">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Login</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-  <br>
+    <ion-item>
+      <ion-label position="floating">Email Address</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
 
-  Login to Continue
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  </div>
 
+  <div class="container-child">
+    <ion-button size="big">Sign in</ion-button>
+  </div>
 
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Login</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-item>
-    <ion-label position="floating">Email Address</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">Password</ion-label>
-    <ion-input type="password"></ion-input>
-    <!-- <ion-icon slot="end" name="eye-outline"></ion-icon> -->
-  </ion-item>
-
-  Remember Password
-
-  <ion-button expand="full">Sign in</ion-button>
-
-  Don't have an account? Click Register
-
-  <br>
-
-  Forgot Password? Click Here
 </ion-content>
 
 <ion-footer >

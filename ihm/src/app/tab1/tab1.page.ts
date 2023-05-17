@@ -12,8 +12,8 @@ export class Tab1Page {
     private navCrtl: NavController 
     ) {}
 
-  goAction(){
+/*   goAction(){
     console.log('Action Button was Clicked!')
     this.navCrtl.navigateForward('action')
-  }
+  } */
 }

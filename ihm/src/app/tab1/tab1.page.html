@@ -20,7 +20,7 @@
   <ion-grid [fixed]="true">
     <ion-row class="container_scroll">
         <ion-button size="small">Drama</ion-button>      
-        <ion-button size="small" (click)="goAction()">Action</ion-button>
+        <ion-button size="small">Action</ion-button>
         <ion-button size="small">Comedy</ion-button>      
         <ion-button size="small">Horror</ion-button>      
         <ion-button size="small">Fiction</ion-button>      
@@ -38,7 +38,8 @@
     </ion-toolbar>
   </ion-header>
 
-    <ion-card id="container-card">    
+  <div class="container">
+    <ion-card>    
       <ion-card-content>
       <ion-button size="small" shape="round" slot="start">Continue Watching</ion-button>      
         <ion-grid [fixed]="true">
@@ -54,9 +55,11 @@
         </ion-grid>
       </ion-card-content>
     </ion-card>
-        
-    <ion-card id="container-card">    
+  </div> 
+
+    <ion-card>    
       <ion-card-content>
+        <ion-button size="small" shape="round" slot="start">Action</ion-button>      
         <ion-grid [fixed]="true">
           <ion-row class="container_scroll">
             <img src="assets/img/jumanji1.png" alt="movie">
