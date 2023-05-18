@@ -12,49 +12,46 @@
 <ion-content [fullscreen]="true">
 
 
-  <ion-thumbnail>
-    <img alt="icon" src="assets/icon/totalMovies.png" />
-  </ion-thumbnail>
-
-  Welcome to Total Movie !!
-
-  <br>
-
-  Register to Continue
-
-
+  <div class="container-parent">
+    <div class="container-child">
+      <ion-card class= "color">
+        <img alt="icon" src="assets/icon/totalMovies.png"/>
+      </ion-card>
+    </div>
+  </div>
   
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container-parent">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Register</ion-title>
+      </ion-toolbar>
+    </ion-header>
 
-  <ion-item>
-    <ion-label position="floating">Name</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Email</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Password</ion-label>
-    <ion-input type="password"></ion-input>
-    <!-- <ion-icon slot="end" name="eye-outline"></ion-icon> -->
-  </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password"></ion-input>
+      <!-- <ion-icon slot="end" name="eye-outline"></ion-icon> -->
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Type your Password Again</ion-label>
-    <ion-input type="password"></ion-input>
-    <!-- <ion-icon slot="end" name="eye-outline"></ion-icon> -->
-  </ion-item>
-  <ion-button expand="full">Register</ion-button>
-
-  Have an account? Click Sign in
-
+    <ion-item>
+      <ion-label position="floating">Type your Password Again</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  </div>
+  
+  <div class="container-child">
+    <ion-button expand="full">Register</ion-button>
+  </div>
 </ion-content>
 
 

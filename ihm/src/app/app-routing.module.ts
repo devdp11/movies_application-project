@@ -14,10 +14,6 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
-  {
-    path: 'movie',
-    loadChildren: () => import('./movie/movie.module').then( m => m.MoviePageModule)
-  }
 
 
   

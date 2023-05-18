@@ -1,0 +1,18 @@
+.container-parent{
+	display: grid;
+    padding: 8px;
+	text-align: center;
+	justify-content: center;
+    grid-template-columns: auto; 
+}
+
+.container-child{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color {
+    background-color: #FFB660;
+}
