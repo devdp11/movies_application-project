@@ -5,7 +5,8 @@
       <ion-button size="small" shape="round">
         <ion-icon name="globe-outline"></ion-icon>
             English
-      </ion-button>      
+      </ion-button> 
+           
     </ion-title>
 
     <ion-title slot="end" color="primary">
@@ -32,15 +33,9 @@
   </ion-grid>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" >
 
   <div class="container">
-    <ion-card>    
-      <ion-card-content>
       <ion-button size="small" shape="round" slot="start">Continue Watching</ion-button>      
         <ion-grid [fixed]="true">
           <ion-row class="container_scroll">
@@ -53,12 +48,9 @@
             <img src="assets/img/impossible.png" alt="movie">
           </ion-row>
         </ion-grid>
-      </ion-card-content>
-    </ion-card>
   </div> 
 
-    <ion-card>    
-      <ion-card-content>
+  <div class="container">
         <ion-button size="small" shape="round" slot="start">Action</ion-button>      
         <ion-grid [fixed]="true">
           <ion-row class="container_scroll">
@@ -71,7 +63,36 @@
             <img src="assets/img/impossible.png" alt="movie">
           </ion-row>
         </ion-grid>
-      </ion-card-content>
-    </ion-card>
+  </div>
 
+  <div class="container">
+    <ion-button size="small" shape="round" slot="start">Adventure</ion-button>      
+    <ion-grid [fixed]="true">
+      <ion-row class="container_scroll">
+        <img src="assets/img/jumanji1.png" alt="movie">
+        <img src="assets/img/jumanji2.png" alt="movie">
+        <img src="assets/img/jumanji3.png" alt="movie">
+        <img src="assets/img/ff7.png" alt="movie">            
+        <img src="assets/img/ff8.png" alt="movie">  
+        <img src="assets/img/ff.png" alt="movie">
+        <img src="assets/img/impossible.png" alt="movie">
+      </ion-row>
+    </ion-grid>
+</div>
+
+<div class="container">
+  <ion-button size="small" shape="round" slot="start">Drama</ion-button>      
+  <ion-grid [fixed]="true">
+    <ion-row class="container_scroll">
+      <img src="assets/img/jumanji1.png" alt="movie">
+      <img src="assets/img/jumanji2.png" alt="movie">
+      <img src="assets/img/jumanji3.png" alt="movie">
+      <img src="assets/img/ff7.png" alt="movie">            
+      <img src="assets/img/ff8.png" alt="movie">  
+      <img src="assets/img/ff.png" alt="movie">
+      <img src="assets/img/impossible.png" alt="movie">
+    </ion-row>
+  </ion-grid>
+</div>
+  
 </ion-content>
