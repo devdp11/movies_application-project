@@ -1,31 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Movie Page</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="tabs/tab3"></ion-back-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
   <ion-grid *ngFor="let movie of dataMovies | keyvalue" class="ion-margin">
-
     <ion-row>
       <ion-col size="4">
         <img src={{movie.value.img}} class="movie">
       </ion-col>
     </ion-row>
     <ion-col class= "title"> {{ movie.value.title }}</ion-col>
-    <ion-row class= "rating">{{ movie.value.rating }}</ion-row>
-    <ion-text class="category1">Category:</ion-text>
-    <ion-text class= "category2">{{ movie.value.category }}</ion-text>
-    <ion-text class="duration1">Duration:</ion-text>
-    <ion-text class= "duration2">{{ movie.value.duration }}</ion-text>
-    <ion-button class="button">Watch Later</ion-button>
-    <ion-text class="synopsis1">Sinopse:</ion-text>
-    <ion-text class= "synopsis2">{{ movie.value.synopsis }}</ion-text>
-
+    <ion-row class= "containerMovie">
+      <ion-icon name="calendar-outline"></ion-icon>{{ movie.value.release_year }} | <ion-icon name="time-outline"></ion-icon>Duração |  <ion-icon name="ticket-outline"></ion-icon>{{ movie.value.category }}
+    </ion-row>
+    <ion-button class = "button">
+      <ion-icon name="eye-outline"></ion-icon>
+          Watch Later
+    </ion-button> 
   </ion-grid>
 
 

@@ -3,11 +3,10 @@ import { Component, OnInit } from '@angular/core';
 interface Movies {
   [key: string]: {
     id: string;
-    title: string;
     category: string;
     rating: string;
-    release_year: string;
     img: string;
+    cast: string;
   };
 };
 

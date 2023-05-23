@@ -1,22 +1,24 @@
 {
     "jumanji1": {
         "id": "1",
-        "title": "Jumanji - Bem vindo à selva",
+        "title": "Jumanji:Bem vindo à selva",
         "category": "Aventura / Comédia",
         "rating": "4.9",
         "duration": "1h 30",
         "release_year": "2017",
         "synopsis": "filme1",
-        "img": "./assets/img/jumanji-1.png"
+        "img": "./assets/img/jumanji-1.png",
+        "cast": "Dwayne Johnson"
     },
     "jumanji2": {
         "id": "2",
-        "title": "Jumanji - O nível seguinte",
+        "title": "Jumanji:O nível seguinte",
         "category": "Aventura / Comédia",
         "rating": "4.9",
         "release_year": "2019",
         "synopsis": "filme2",
-        "img": "./assets/img/jumanji-2.png"
+        "img": "./assets/img/jumanji-2.png",
+        "cast": "Dwayne Johnson"
     },
     "fast&furious7": {
         "id": "3",
@@ -25,7 +27,8 @@
         "rating": "4.5",
         "release_year": "2015",
         "synopsis": "filme3",
-        "img": "./assets/img/fast&furious7.png"
+        "img": "./assets/img/fast&furious7.png",
+        "cast": "Vin Diesel"
     },
     "fast&furious8": {
         "id": "4",
@@ -34,7 +37,8 @@
         "rating": "4.0",
         "release_year": "2017",
         "synopsis": "filme4",
-        "img": "./assets/img/fast&furious8.png"
+        "img": "./assets/img/fast&furious8.png",
+        "cast": "Dwayne Johnson"
     },
     "fast&furious9": {
         "id": "5",
@@ -43,6 +47,7 @@
         "rating": "4.4",
         "release_year": "2021",
         "synopsis": "filme5",
-        "img": "./assets/img/fast&furious9.png"
+        "img": "./assets/img/fast&furious9.png",
+        "cast": "Vin Diesel"
     }
 }

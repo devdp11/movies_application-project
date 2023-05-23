@@ -34,5 +34,18 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" >
+  
+  <ion-grid [fixed]="true" class="movie-grid">
+    <ion-row class="grid-container">
+      <ng-container *ngFor="let movie of dataMovies | keyvalue">
+        <label for=""></label>
+        <ion-col>
+          <img src={{movie.value.img}} class="movie">
+        </ion-col>
+      </ng-container>
+    </ion-row>
+  </ion-grid>
+  
+  
 
 </ion-content>
