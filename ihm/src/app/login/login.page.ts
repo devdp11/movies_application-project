@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Users {
+  [key: string]: {
+    id: string;
+    name: string;
+    username: string;
+    password: string;
+  };
+};
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -7,9 +16,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.dataUsers = {}
+  }
+
+  public dataUsers: Users;
 
   ngOnInit() {
+    fetch('./assets/data/users.json')
+      .then(res => res.json())
+      .then(json => {
+        this.dataUsers = json;
+      });
   }
 
 }

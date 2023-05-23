@@ -41,6 +41,14 @@
     <ion-button size="big">Sign in</ion-button>
   </div>
 
+  <ion-grid>
+    <ion-row *ngFor="let movie of dataMovies | keyvalue" class="ion-margin">
+      <ion-col size="10"><ion-text color="primary">{{ users.value.name }}</ion-text></ion-col>
+      <ion-col size="2"><ion-text color="medium" class="ion-float-right"><small>{{ users.value.username }}</small></ion-text></ion-col>
+      <ion-col size="12"> {{ users.value.password }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
 
 <ion-footer >

@@ -1,0 +1,42 @@
+{
+    "jumanji1": {
+        "id": "1",
+        "title": "Jumanji - Bem vindo à selva",
+        "category": "Adventure",
+        "imdb_rating": "4.9",
+        "release_year": "2017",
+        "img": "./assets/data/jumanji-1.png"
+    },
+    "jumanji2": {
+        "id": "2",
+        "title": "Jumanji - O nível seguinte",
+        "category": "Adventure",
+        "imdb_rating": "4.9",
+        "release_year": "2019",
+        "img": "./assets/data/jumanji-1.png"
+    },
+    "fast&furious7": {
+        "id": "3",
+        "title": "Fast and Furious 7",
+        "category": "Action",
+        "imdb_rating": "4.5",
+        "release_year": "2015",
+        "img": "./assets/data/fast&furious7.png"
+    },
+    "fast&furious8": {
+        "id": "4",
+        "title": "Fast and Furious 8",
+        "category": "Action",
+        "imdb_rating": "4.0",
+        "release_year": "2017",
+        "img": "./assets/data/fast&furious8.png"
+    },
+    "fast&furious9": {
+        "id": "5",
+        "title": "Fast and Furious 9",
+        "category": "Action",
+        "imdb_rating": "4.4",
+        "release_year": "2021",
+        "img": "./assets/data/fast&furious9.png"
+    }
+}
