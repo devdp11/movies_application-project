@@ -5,7 +5,7 @@ interface Movies {
     id: string;
     title: string;
     category: string;
-    imdb_rating: string;
+    rating: string;
     release_year: string;
     img: string;
   };

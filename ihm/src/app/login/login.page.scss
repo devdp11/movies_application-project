@@ -1,4 +1,4 @@
-.container-parent{
+.container-parent {
 	display: grid;
     padding: 8px;
 	text-align: center;
@@ -6,7 +6,7 @@
     grid-template-columns: auto; 
 }
 
-.container-child{
+.container-child {
     padding: 100px;
     display: flex;
     justify-content: center;
@@ -15,4 +15,12 @@
 
 .color {
     background-color: #FFB660;
+}
+
+.login {
+    color: #FFB660;
+    position: relative;
+    margin-left: 10px;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }

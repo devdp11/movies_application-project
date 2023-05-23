@@ -1,19 +1,36 @@
-import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { Component, OnInit } from '@angular/core';
+
+interface Movies {
+  [key: string]: {
+    id: string;
+    title: string;
+    category: string;
+    rating: string;
+    release_year: string;
+    img: string;
+  };
+};
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
 
-  constructor(
-    private navCrtl: NavController 
-    ) {}
+export class Tab1Page implements OnInit {
 
-/*   goAction(){
-    console.log('Action Button was Clicked!')
-    this.navCrtl.navigateForward('action')
-  } */
+  constructor() {
+    this.dataMovies = {}
+  }
+  
+  public dataMovies: Movies;
+
+  ngOnInit() {
+      fetch('./assets/data/movies.json')
+      .then(res => res.json())
+      .then(json => {
+        this.dataMovies = json;
+      });
+  }
+
 }

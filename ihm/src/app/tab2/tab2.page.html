@@ -13,19 +13,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title></ion-title>
-    </ion-toolbar>
-  </ion-header>
 
   <ion-grid>
-    <ion-row *ngFor="let movie of dataMovies | keyvalue" class="ion-margin">
-      <ion-col>{{ movie.value.img }}</ion-col> 
-      <ion-col size="10"><ion-text color="primary">{{ movie.value.release_year }}</ion-text></ion-col>
-      <ion-col size="2"><ion-text color="medium" class="ion-float-right"><small>{{ movie.value.imdb_rating }}</small></ion-text></ion-col>
-      <ion-col size="12"> {{ movie.value.title }}</ion-col>
-      <ion-col size="2"><ion-text color="medium" class="ion-float-left"><small>{{ movie.value.category }}</small></ion-text></ion-col>
-    </ion-row>
+      <ion-row *ngFor="let movie of dataMovies | keyvalue" class="ion-margin">
+        <ion-col size="4"><img src={{movie.value.img}} class="movie"></ion-col>
+        <ion-col size="10"><ion-text class = "release">{{ movie.value.release_year }}</ion-text></ion-col>
+        <ion-col size="20" class = "title"> {{ movie.value.title }}</ion-col>
+        <ion-col size="2" class = "category"><ion-text class="ion-float-left"><small>{{ movie.value.category }}</small></ion-text></ion-col>
+        <ion-col size="2" class = "rating"><ion-text color="medium" class="ion-float-left"><small>{{ movie.value.rating }}</small></ion-text></ion-col>
+      </ion-row>
   </ion-grid>
 </ion-content>

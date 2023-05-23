@@ -1,0 +1,43 @@
+.ion-margin{
+    margin-top: 15px;
+    margin-bottom: -105px;
+}
+.movie{
+    width: 120px;
+    height: 180px;
+    margin-top: 0px;
+    border-radius: 15px;
+    position: relative;
+    left: -10px;
+}
+
+.title{
+    position: relative;
+    top: -200px;
+    left: 115px;
+    color: #000000;
+    font-size: 16px;
+}
+
+.category{
+    position: relative;
+    top: -190px;
+    left: 115px;
+    color: #7e7e7e;
+    font-size: 16px;
+}
+
+.release{
+    position: relative;
+    top: -170px;
+    left: 330px;
+    color: #FFB660;
+    font-size: 14px;
+}
+
+.rating{
+    position: relative;
+    top: -190px;
+    left: 275px;
+    font-size: 18px;
+}
