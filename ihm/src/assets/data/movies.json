@@ -4,9 +4,9 @@
         "title": "Jumanji:Bem vindo à selva",
         "category": "Aventura / Comédia",
         "rating": "4.9",
-        "duration": "1h 30",
+        "duration": "1h 59m",
         "release_year": "2017",
-        "synopsis": "filme1",
+        "synopsis": "Quatro adolescentes encontram um videogame cuja ação se passa em uma floresta tropical. Empolgados com o jogo, eles escolhem seus avatares para o desafio, mas um evento inesperado faz com que eles sejam transportados para dentro do universo fictício, transformando-os nos personagens da aventura.",
         "img": "./assets/img/jumanji-1.png",
         "cast": "Dwayne Johnson"
     },
@@ -15,8 +15,9 @@
         "title": "Jumanji:O nível seguinte",
         "category": "Aventura / Comédia",
         "rating": "4.9",
+        "duration": "2h 3m",
         "release_year": "2019",
-        "synopsis": "filme2",
+        "synopsis": "Spencer volta ao mundo fantástico de Jumanji. Os amigos Martha, Fridge e Bethany entram no jogo e tentam trazê-lo para casa. A turma descobre ainda mais obstáculos e perigos a serem superados.",
         "img": "./assets/img/jumanji-2.png",
         "cast": "Dwayne Johnson"
     },
@@ -25,8 +26,9 @@
         "title": "Velocidade Furiosa 7",
         "category": "Ação / Aventura",
         "rating": "4.5",
+        "duration": "2h 20m",
         "release_year": "2015",
-        "synopsis": "filme3",
+        "synopsis": "Um agente do governo oferece ajuda para cuidar de Shaw em troca de Dom e o grupo resgatar um hacker sequestrado. Dessa vez, não se trata apenas de velocidade: a corrida é pela sobrevivência.",
         "img": "./assets/img/fast&furious7.png",
         "cast": "Vin Diesel"
     },
@@ -35,8 +37,9 @@
         "title": "Velocidade Furiosa 8",
         "category": "Ação / Aventura",
         "rating": "4.0",
+        "duration": "2h 16m",
         "release_year": "2017",
-        "synopsis": "filme4",
+        "synopsis": "Depois da aposentadoria de Brian e Mia, Dom e Letty aproveitam a lua de mel e levam uma vida pacata e normal. Mas a adrenalina do passado volta com tudo quando uma mulher misteriosa obriga Dom a retornar ao mundo do crime e da velocidade.",
         "img": "./assets/img/fast&furious8.png",
         "cast": "Dwayne Johnson"
     },
@@ -45,8 +48,9 @@
         "title": "Velocidade Furiosa 9",
         "category": "Ação / Aventura",
         "rating": "4.4",
+        "duration": "2h 15m",
         "release_year": "2021",
-        "synopsis": "filme5",
+        "synopsis": "Dominic Toretto e Letty vivem uma vida pacata ao lado do filho. Mas eles logo são ameaçados pelo passado de Dom: seu irmão desaparecido Jakob, que retorna e está trabalhando ao lado de Cipher. Cabe a Dom reunir a equipe novamente para enfrentá-los.",
         "img": "./assets/img/fast&furious9.png",
         "cast": "Vin Diesel"
     }

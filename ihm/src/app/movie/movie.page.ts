@@ -6,6 +6,7 @@ interface Movies {
     title: string;
     category: string;
     rating: string;
+    duration: string;
     release_year: string;
     synopsis: string;
     img: string;

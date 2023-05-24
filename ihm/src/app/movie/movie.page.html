@@ -14,8 +14,10 @@
     </ion-row>
     <ion-col class= "title"> {{ movie.value.title }}</ion-col>
     <ion-row class= "containerMovie">
-      <ion-icon name="calendar-outline"></ion-icon>{{ movie.value.release_year }} | <ion-icon name="time-outline"></ion-icon>Duração |  <ion-icon name="ticket-outline"></ion-icon>{{ movie.value.category }}
+      <ion-icon name="calendar-outline"></ion-icon>{{ movie.value.release_year }} | <ion-icon name="time-outline"></ion-icon>{{ movie.value.duration }} |  <ion-icon name="ticket-outline"></ion-icon>{{ movie.value.category }}
     </ion-row>
+    <div class="divider"></div>
+    <ion-col class= "synopsis"> {{ movie.value.synopsis }}</ion-col>
     <ion-button class = "button">
       <ion-icon name="eye-outline"></ion-icon>
           Watch Later
