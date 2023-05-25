@@ -37,7 +37,7 @@
     <ion-row>
       <ion-col size="3" *ngFor="let movie of dataMovies" class="ion-margin">
         <ion-card button="true" class="board" (click)="goMovie(movie)">
-          <img [src]="movie.img" class="button">
+          <img [src]="movie.img">
         </ion-card>
       </ion-col>
     </ion-row>
