@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface Movies {
-  [key: string]: {
     id: string;
     category: string;
     rating: string;
     img: string;
     cast: string;
-  };
 };
 
 @Component({
@@ -18,12 +17,11 @@ interface Movies {
 
 export class Tab1Page implements OnInit {
 
-  constructor() {
-    this.dataMovies = {}
+  public dataMovies: Movies[] = [];
+
+  constructor(private router: Router) {
   }
   
-  public dataMovies: Movies;
-
   ngOnInit() {
       fetch('./assets/data/movies.json')
       .then(res => res.json())
@@ -32,4 +30,7 @@ export class Tab1Page implements OnInit {
       });
   }
 
+  goMovie(movie:Movies) {
+    this.router.navigate(['/movie', movie.id]);
+  }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 interface Movies {
-  [key: string]: {
     id: string;
     title: string;
     category: string;
@@ -11,7 +11,6 @@ interface Movies {
     synopsis: string;
     img: string;
     cast: string;
-  };
 };
 
 @Component({
@@ -20,18 +19,21 @@ interface Movies {
   styleUrls: ['./movie.page.scss'],
 })
 export class MoviePage implements OnInit {
+  
+  public receivedMovie: any;
+  public movie: Movies | undefined;
+  public dataMovies: Movies[] = [];
 
-  constructor() {
-    this.dataMovies = {}
-   }
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
-  public dataMovies: Movies;
 
   ngOnInit() {
+    this.receivedMovie = this.route.snapshot.paramMap.get('id');
       fetch('./assets/data/movies.json')
       .then(res => res.json())
       .then(json => {
         this.dataMovies = json;
+        this.movie = this.dataMovies.find((movie) => movie.id === this.receivedMovie);
       });
   }
 

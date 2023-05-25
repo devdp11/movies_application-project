@@ -1,57 +1,57 @@
-{
-    "jumanji1": {
+[
+    {
         "id": "1",
         "title": "Jumanji:Bem vindo à selva",
-        "category": "Aventura / Comédia",
+        "category": "Aventura",
         "rating": "4.9",
         "duration": "1h 59m",
         "release_year": "2017",
         "synopsis": "Quatro adolescentes encontram um videogame cuja ação se passa em uma floresta tropical. Empolgados com o jogo, eles escolhem seus avatares para o desafio, mas um evento inesperado faz com que eles sejam transportados para dentro do universo fictício, transformando-os nos personagens da aventura.",
         "img": "./assets/img/jumanji-1.png",
-        "cast": "Dwayne Johnson"
+        "cast": "Dwayne Johnson / Kevin Hart / Jack Black / Karen Gillan / Danny DeVito / Awkwafina / Madison Iseman / Alex Wolf"
     },
-    "jumanji2": {
+    {
         "id": "2",
         "title": "Jumanji:O nível seguinte",
-        "category": "Aventura / Comédia",
+        "category": "Aventura",
         "rating": "4.9",
         "duration": "2h 3m",
         "release_year": "2019",
         "synopsis": "Spencer volta ao mundo fantástico de Jumanji. Os amigos Martha, Fridge e Bethany entram no jogo e tentam trazê-lo para casa. A turma descobre ainda mais obstáculos e perigos a serem superados.",
         "img": "./assets/img/jumanji-2.png",
-        "cast": "Dwayne Johnson"
+        "cast": "Dwayne Johnson / Kevin Hart / Jack Black / Karen Gillan / Nick Jonas / Madison Iseman / Alex Wolf"
     },
-    "fast&furious7": {
+    {
         "id": "3",
         "title": "Velocidade Furiosa 7",
-        "category": "Ação / Aventura",
+        "category": "Ação",
         "rating": "4.5",
         "duration": "2h 20m",
         "release_year": "2015",
         "synopsis": "Um agente do governo oferece ajuda para cuidar de Shaw em troca de Dom e o grupo resgatar um hacker sequestrado. Dessa vez, não se trata apenas de velocidade: a corrida é pela sobrevivência.",
         "img": "./assets/img/fast&furious7.png",
-        "cast": "Vin Diesel"
+        "cast": "Vin Diesel / Paul Walker / Cody Walker / Nathalie Emmanuel / Jason Stathman / Jordana Brewter / Michelle Rodriguez / Dwayne Johnson / Elsa Pataky / Sung Kang / Tyrese Gibson / Ludacris / Kurt Russel / Luke Evans  "
     },
-    "fast&furious8": {
+    {
         "id": "4",
         "title": "Velocidade Furiosa 8",
-        "category": "Ação / Aventura",
+        "category": "Ação",
         "rating": "4.0",
         "duration": "2h 16m",
         "release_year": "2017",
         "synopsis": "Depois da aposentadoria de Brian e Mia, Dom e Letty aproveitam a lua de mel e levam uma vida pacata e normal. Mas a adrenalina do passado volta com tudo quando uma mulher misteriosa obriga Dom a retornar ao mundo do crime e da velocidade.",
         "img": "./assets/img/fast&furious8.png",
-        "cast": "Dwayne Johnson"
+        "cast": "Vin Diesel / Paul Walker / Cody Walker / Nathalie Emmanuel / Jason Stathman / Jordana Brewter / Michelle Rodriguez / Dwayne Johnson / Elsa Pataky / Charlize Theron / Tyrese Gibson / Ludacris / Kurt Russel / Luke Evans / Charlize Theron"
     },
-    "fast&furious9": {
+    {
         "id": "5",
         "title": "Velocidade Furiosa 9",
-        "category": "Ação / Aventura",
+        "category": "Ação",
         "rating": "4.4",
         "duration": "2h 15m",
         "release_year": "2021",
         "synopsis": "Dominic Toretto e Letty vivem uma vida pacata ao lado do filho. Mas eles logo são ameaçados pelo passado de Dom: seu irmão desaparecido Jakob, que retorna e está trabalhando ao lado de Cipher. Cabe a Dom reunir a equipe novamente para enfrentá-los.",
         "img": "./assets/img/fast&furious9.png",
-        "cast": "Vin Diesel"
+        "cast": "Vin Diesel / Paul Walker / Sung Kang / Nathalie Emmanuel / John Cena / Lucas Black / Ludacris / Tyrese Gibson / Martyn Ford / Helen Mirren / Michelle Rodriguez / Jordana Brewter / Cardi B"
     }
-}
+]

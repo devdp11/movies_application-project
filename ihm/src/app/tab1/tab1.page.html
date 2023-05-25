@@ -14,8 +14,6 @@
     </ion-title>
   </ion-toolbar>
   
-  <ion-searchbar search-icon="search" color="primary" placeholder="Search a movie or actor"></ion-searchbar>
-
   <ion-grid [fixed]="true">
     <ion-row class="scroll">
         <ion-button size="small">Drama</ion-button>      
@@ -33,19 +31,16 @@
   
 </ion-header>
 
-<ion-content [fullscreen]="true" >
-  
-  <ion-grid [fixed]="true" class="movie-grid">
-    <ion-row class="grid-container">
-      <ng-container *ngFor="let movie of dataMovies | keyvalue">
-        <label for=""></label>
-        <ion-col>
-          <img src={{movie.value.img}} class="movie">
-        </ion-col>
-      </ng-container>
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" *ngFor="let movie of dataMovies" class="ion-margin">
+        <ion-card button="true" class="board" (click)="goMovie(movie)">
+          <img [src]="movie.img" class="button">
+        </ion-card>
+      </ion-col>
     </ion-row>
   </ion-grid>
-  
-  
 
 </ion-content>
