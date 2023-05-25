@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 interface Movies {
     id: string;
     title: string;
-    category: string;
+    genre: string;
     rating: string;
     release_year: string;
     img: string;

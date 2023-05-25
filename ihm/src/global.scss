@@ -39,12 +39,20 @@
 	--ion-color-secondary-contrast-rgb: 255,255,255;
 	--ion-color-secondary-shade: #242220;
 	--ion-color-secondary-tint: #3e3d3a;
+
+	--ion-color-tertiary: #252836;
+	--ion-color-tertiary-rgb: 255,182,96;
+	--ion-color-tertiary-contrast: #000000;
+	--ion-color-tertiary-contrast-rgb: 0,0,0;
+	--ion-color-tertiary-shade: #e0a054;
+	--ion-color-tertiary-tint: #ffbd70;
 }
 
 ion-button {
     --background: #FFB660;
     ion-icon {
-      margin-right: 5px;
+      margin-right: 10px;
+	  color:#000000;
     }
 }
 

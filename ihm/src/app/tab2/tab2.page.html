@@ -2,7 +2,7 @@
   <ion-toolbar>
 
     <ion-title slot="start" color="primary" class="logo">
-        Search a Movie
+        Find a Movie
     </ion-title>
 
     <ion-title color="primary" class="logo">
@@ -30,7 +30,7 @@
       </ion-col>
         <ion-col size="10"><ion-text class = "release">{{ movie.release_year }}</ion-text></ion-col>
         <ion-col size="20" class = "title"> {{ movie.title }}</ion-col>
-        <ion-col size="2" class = "category"><ion-text class="ion-float-left"><small>{{ movie.category }}</small></ion-text></ion-col>
+        <ion-col size="2" class = "genre"><ion-text class="ion-float-left"><small>{{ movie.genre }}</small></ion-text></ion-col>
         <ion-col size="2" class = "rating"><ion-text color="medium" class="ion-float-left"><small>{{ movie.rating }}</small></ion-text></ion-col>
     </ion-row>
     <ion-row *ngIf="foundMovies.length === 0">
