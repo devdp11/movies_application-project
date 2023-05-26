@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PlaylistsService, Movie } from '../services/playlists.service';
 import { Storage } from '@ionic/storage-angular';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 interface Movies {
   id: string;
@@ -21,7 +22,7 @@ export class Tab3Page implements OnInit{
   
   public watchLaterMovies: Movie[] = [];
 
-  constructor(private playListService: PlaylistsService, private storage: Storage, private router: Router) {}
+  constructor(private playListService: PlaylistsService, private storage: Storage, private router: Router, private alerta: AlertController) {}
 
   ngOnInit() {
     this.loadWatchLaterMovies();
@@ -38,9 +39,31 @@ export class Tab3Page implements OnInit{
 
   async removeMovie(movie: Movie) {
     try {
-      await this.playListService.removeMoviesPlaylist(movie);
       console.log('Movie removed', movie);
       await this.loadWatchLaterMovies();
+
+      const alerta = await this.alerta.create({
+        message: 'Tens a certeza que desejas remover o filme da playlist?',
+        buttons: [
+          {
+            text: 'Não',
+            handler: () => {
+              this.router.navigate(['/tabs/tab3']);
+              alerta.dismiss();
+            }
+          },
+          {
+            text: 'Sim',
+            handler: () => {
+              this.playListService.removeMoviesPlaylist(movie);
+              this.router.navigate(['/tabs/tab3']);
+              alerta.dismiss();
+            }
+          }
+        ]
+      });
+      await alerta.present();
+      return;
     } catch (error) {
       console.error('Error removing the movie', error);
     }
@@ -60,3 +83,26 @@ export class Tab3Page implements OnInit{
     this.router.navigate(['/movie', movie.id]);
   }
 }
+
+/* async logout() {
+  const alerta = await this.alerta.create({
+    message: 'Tens a certeza que desejas sair da aplicação?',
+    buttons: [
+      {
+        text: 'Não',
+        handler: () => {
+          alerta.dismiss();
+        }
+      },
+      {
+        text: 'Sim',
+        handler: () => {
+          this.router.navigate(['/login']);
+          alerta.dismiss();
+        }
+      }
+    ]
+  });
+  await alerta.present();
+  return;
+} */

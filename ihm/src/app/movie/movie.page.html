@@ -21,11 +21,11 @@
     <ion-text class="synopsis">{{ movie.synopsis }}</ion-text>
     <ion-button class = "button" (click) = "goWatchLater()"><ion-icon name="eye-outline"></ion-icon>Ver mais tarde</ion-button> 
     
-    <div class="exemplo">
+    <div class="ratemovie2">
     <ion-title class= "ratemovie" ><ion-icon name="star-outline"></ion-icon>Avalie o filme</ion-title>
-    <div class ="score">
+    <div class ="rate">
       <ion-row>
-        <ion-select [(ngModel)]="movie.rating">
+        <ion-select [(ngModel)]="movie.rating" (ionChange)="rating()">
           <ion-select-option value="1.0">1.0</ion-select-option>
           <ion-select-option value="2.0">2.0</ion-select-option>
           <ion-select-option value="3.0">3.0</ion-select-option>

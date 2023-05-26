@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 interface Movies {
     id: string;
@@ -19,7 +20,7 @@ export class Tab1Page implements OnInit {
 
   public dataMovies: Movies[] = [];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private alerta: AlertController) {
   }
   
   ngOnInit() {
@@ -32,5 +33,28 @@ export class Tab1Page implements OnInit {
 
   goMovie(movie:Movies) {
     this.router.navigate(['/movie', movie.id]);
+  }
+
+  async logout() {
+    const alerta = await this.alerta.create({
+      message: 'Tens a certeza que desejas sair da aplicação?',
+      buttons: [
+        {
+          text: 'Não',
+          handler: () => {
+            alerta.dismiss();
+          }
+        },
+        {
+          text: 'Sim',
+          handler: () => {
+            this.router.navigate(['/login']);
+            alerta.dismiss();
+          }
+        }
+      ]
+    });
+    await alerta.present();
+    return;
   }
 }

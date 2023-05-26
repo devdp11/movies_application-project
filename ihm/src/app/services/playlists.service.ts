@@ -81,4 +81,11 @@ export class PlaylistsService {
     }
   }
 
+  checkIfMovieExists(id: string): Promise<boolean> {
+    return new Promise<boolean>((resolve) => {
+      const existingMovie = this.watchLaterList.find(movie => movie.id === id);
+      resolve(existingMovie !== undefined);
+    });
+  }
+
 }

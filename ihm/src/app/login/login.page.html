@@ -38,17 +38,8 @@
   </div>
 
   <div class="container-child">
-    <ion-button size="big">Sign in</ion-button>
+    <ion-button size="big" routerLink="/tabs/tab1">Sign in</ion-button>
   </div>
-
-  <ion-grid>
-    <ion-row *ngFor="let user of dataUsers | keyvalue" class="login">
-      <ion-col size="10">Name: {{ user.value.name }}</ion-col>
-      <ion-col size="12">Username: {{ user.value.username }}</ion-col>
-      <ion-col size="12">Password: {{ user.value.password }}</ion-col>
-
-    </ion-row>
-  </ion-grid>
 
 </ion-content>
 
