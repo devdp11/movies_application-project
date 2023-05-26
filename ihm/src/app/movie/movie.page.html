@@ -19,6 +19,6 @@
     <ion-text class="info">{{ movie.release_year }} | {{ movie.duration }} | {{ movie.genre }} </ion-text>
     <div class="divider"></div>
     <ion-text class="synopsis">{{ movie.synopsis }}</ion-text>
-    <ion-button class = "button"><ion-icon name="eye-outline"></ion-icon>Ver mais tarde</ion-button> 
+    <ion-button class = "button" (click) = "goWatchLater()"><ion-icon name="eye-outline"></ion-icon>Ver mais tarde</ion-button> 
   </ion-grid>
 </ion-content>
