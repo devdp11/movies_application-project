@@ -2,7 +2,7 @@
   <ion-toolbar>
 
     <ion-title slot="start" color="primary" class="logo">
-        Find a Movie
+        Procure um filme
     </ion-title>
 
     <ion-title color="primary" class="logo">
@@ -17,12 +17,12 @@
 <ion-content [fullscreen]="true">
 
   <ion-icon name="search-outline" class="icon" (click)="search()"></ion-icon>
-  <input type="text" placeholder="search using cast member" class="search-bar" [(ngModel)]="search1">
+  <input type="text" placeholder="Procure usando um membro do elenco" class="search-bar" [(ngModel)]="search1">
 
   <ion-grid class="ion-margin">
     <ion-row>
       <ion-col>
-        <h2 *ngIf="foundMovies.length > 0" class="result">Results of search: {{ search1 }}</h2>
+        <h2 *ngIf="foundMovies.length > 0" class="result">Resultados da pesquisa: {{ search1 }}</h2>
       </ion-col>
     </ion-row>
     <ion-row *ngFor="let movie of foundMovies" (click)="goMovie(movie)">
@@ -37,7 +37,7 @@
     </ion-row>
     <ion-row *ngIf="foundMovies.length === 0">
       <ion-col>
-        <p class="result">Empty List | Try Again</p>
+        <p class="result">Lista vazia | Tente novamente</p>
       </ion-col>
     </ion-row>
   </ion-grid>
