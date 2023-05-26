@@ -6,7 +6,11 @@ import { error } from 'console';
 export interface Movie {
   id: string;
   title: string;
+  rating: string;
+  release_year: string;
+  genre: string;
   img: string;
+  
 }
 
 @Injectable({
@@ -14,7 +18,7 @@ export interface Movie {
 })
 export class PlaylistsService {
   
-  private watchLaterList: {id: string, title: string, img: string}[] = [];
+  private watchLaterList: {id: string, title: string, rating:string, release_year: string, genre: string, img: string}[] = [];
   private storageInstance: Storage | null = null;
   readonly STORAGE_KEY = 'watchLaterList';
   
@@ -28,14 +32,14 @@ export class PlaylistsService {
       this.watchLaterList = storedList ? JSON.parse(storedList) : [];
    }
 
-  addWatchLaterList(id: string, title: string, img: string): Promise<void> {
+  addWatchLaterList(id: string, title: string, rating:string, release_year: string, genre: string, img: string): Promise<void> {
     return new Promise<void>((resolve) => {
       const existingMovie = this.watchLaterList.find(movie => movie.id === id);
       if (existingMovie) {
-        console.log('The nome is already in the watch later playlist');
+        console.log('The movie is already in the watch later playlist');
         resolve();
       } else {
-        this.watchLaterList.push({ id, title, img });
+        this.watchLaterList.push({ id, title, rating, release_year, genre, img });
         this.saveData()
           .then(() => {
             console.log('Movie added to the watch later playlist | ', id);
@@ -55,7 +59,7 @@ export class PlaylistsService {
     }
   }
 
-  async getPlaylistMovies(): Promise<{ id: string, title: string, img: string }[]> {
+  async getPlaylistMovies(): Promise<{ id: string, title: string, rating:string, release_year: string, genre: string, img: string }[]> {
     if (!this.storageInstance) {
       await this.initStorage();
     }

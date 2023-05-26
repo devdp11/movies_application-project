@@ -14,32 +14,32 @@
 
 .title{
     position: relative;
-    top: -180px;
-    left: 125px;
+    top: -130px;
+    margin-left: 110px;
     color: #000000;
     font-size: 15px;
 }
 
 .genre{
     position: relative;
-    top: -180px;
-    left: 125px;
+    top: -130px;
+    margin-left: 110px;
     color: #7e7e7e;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .release{
     position: relative;
-    top: -152px;
-    left: 330px;
+    top: -101px;
+    left: 300px;
     color: #FFB660;
     font-size: 14px;
 }
 
 .rating{
     position: relative;
-    top: -180px;
-    left: 275px;
+    top: -130px;
+    left: 135px;
     font-size: 18px;
 }
 
@@ -53,12 +53,12 @@
 }
 
 .search-bar {
-    margin-top: 15px;
+    margin-top: 30px;
     position: relative;
     left: 82px;
     width: 200px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 5px;
     top: -10px;
     font-size: 14px;
     background-color: #FFB660;
@@ -75,6 +75,7 @@ input.search-bar {
     position: relative;
     top: -20px;
     left: 14px;
+    margin-top: 5px;
     margin-left: -30px;
     text-align: center;
 }
@@ -83,6 +84,17 @@ input.search-bar {
     position: relative;
     width: 120px;
     height: 160px;
-    border-radius: 5px;
-    margin-bottom: -10px;
+    border-radius: 15px;
+    margin-bottom: -50px;
+    margin-left: -10px;
+}
+
+.divider {
+    width: 360px;
+    border-bottom: 1px solid #777777;
+    position: relative;
+    margin-left: 2px;
+    margin-bottom: 40px;
+    display: flex;
+    text-align: justify;
 }

@@ -42,7 +42,7 @@ export class MoviePage implements OnInit {
   goWatchLater(){
     console.log('The watch later button was clicked');
     if (this.movie) {
-      this.playlistService.addWatchLaterList(this.movie.id, this.movie.title, this.movie.img);
+      this.playlistService.addWatchLaterList(this.movie.id, this.movie.title, this.movie.rating, this.movie.release_year, this.movie.genre, this.movie.img);
     } else {
       console.log('No movie Found');
     }

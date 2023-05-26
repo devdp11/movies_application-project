@@ -16,14 +16,17 @@
 <ion-content [fullscreen]="true">
  
   <ion-list>
-    <ion-item *ngFor="let movie of watchLaterMovies">
-      <ion-thumbnail slot="start" (click)="goMovie(movie)">
-        <img [src]="movie.img" alt="movie board">
+    <ion-item *ngFor="let movie of watchLaterMovies" (click)="goMovie(movie)">
+      <ion-thumbnail slot="start" class="board">
+        <img [src]="movie.img" alt="movie board" class="img">
       </ion-thumbnail>
       <ion-label>
-        <h2 (click)="goMovie(movie)">{{ movie.title }}</h2>
+        <h2 class="title">{{ movie.title }}</h2>
+        <p class="rating">{{ movie.rating }}</p>
+        <p class="release">{{ movie.release_year }}</p>
+        <p class="genre">{{ movie.genre }}</p>
       </ion-label>
-      <ion-icon name="close-circle-outline" class="trash" (click)="removeMovie(movie)"></ion-icon>
+      <ion-icon name="trash-outline" class="trash" (click)="removeMovie(movie)"></ion-icon>
     </ion-item>
   </ion-list>
   

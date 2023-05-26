@@ -6,6 +6,9 @@ import { Router } from '@angular/router';
 interface Movies {
   id: string;
   title: string;
+  rating: string;
+  release_year: string;
+  genre: string;
   img: string;
 };
 
@@ -43,9 +46,9 @@ export class Tab3Page implements OnInit{
     }
   }
 
-  async addMovies(id: string, title: string, img: string) {
+  async addMovies(id: string, title: string, rating: string, release_year: string, genre: string, img: string) {
     try {
-      await this.playListService.addWatchLaterList(id, title, img);
+      await this.playListService.addWatchLaterList(id, title, rating, release_year, genre, img);
       console.log('Movie added sucessfully');
       await this.loadWatchLaterMovies();
     } catch (error) {

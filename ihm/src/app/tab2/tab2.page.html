@@ -12,12 +12,12 @@
     
   </ion-toolbar>
 
-  <ion-icon name="search-outline" class="icon" (click)="search()"></ion-icon>
-  <input type="text" placeholder="search using cast member" class="search-bar" [(ngModel)]="search1">
-
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <ion-icon name="search-outline" class="icon" (click)="search()"></ion-icon>
+  <input type="text" placeholder="search using cast member" class="search-bar" [(ngModel)]="search1">
 
   <ion-grid class="ion-margin">
     <ion-row>
@@ -25,14 +25,15 @@
         <h2 *ngIf="foundMovies.length > 0" class="result">Results of search: {{ search1 }}</h2>
       </ion-col>
     </ion-row>
-    <ion-row *ngFor="let movie of foundMovies">
+    <ion-row *ngFor="let movie of foundMovies" (click)="goMovie(movie)">
       <ion-col size="4">
-        <img *ngIf="movie.img" [src]="movie.img" class="board" (click)="goMovie(movie)">
+        <img *ngIf="movie.img" [src]="movie.img" class="board">
       </ion-col>
         <ion-col size="10"><ion-text class = "release">{{ movie.release_year }}</ion-text></ion-col>
         <ion-col size="20" class = "title"> {{ movie.title }}</ion-col>
         <ion-col size="2" class = "genre"><ion-text class="ion-float-left"><small>{{ movie.genre }}</small></ion-text></ion-col>
         <ion-col size="2" class = "rating"><ion-text color="medium" class="ion-float-left"><small>{{ movie.rating }}</small></ion-text></ion-col>
+        <div class="divider"></div>
     </ion-row>
     <ion-row *ngIf="foundMovies.length === 0">
       <ion-col>
