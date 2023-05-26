@@ -20,5 +20,18 @@
     <div class="divider"></div>
     <ion-text class="synopsis">{{ movie.synopsis }}</ion-text>
     <ion-button class = "button" (click) = "goWatchLater()"><ion-icon name="eye-outline"></ion-icon>Ver mais tarde</ion-button> 
+    <ion-title class= "ratemovie" >Rate the Movie</ion-title>
+    <div class ="score">
+      <ion-row>
+        <ion-label class="rating">{{ movie.rating }}</ion-label>
+        <ion-select [(ngModel)]="movie.rating">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+        </ion-select>
+      </ion-row>
+    </div>
   </ion-grid>
 </ion-content>

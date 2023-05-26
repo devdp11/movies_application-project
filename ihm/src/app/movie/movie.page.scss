@@ -63,7 +63,7 @@ ion-button {
     display: flex;
     text-align: justify;
 }
-
+    
 .button{
     position: relative;
     margin-right: 0px;
@@ -86,4 +86,22 @@ ion-button {
     position: relative;
     top: 2px;
     font-size: 18px;   
+}
+
+.ratemovie {
+    position: relative;
+    top: 70px;
+    left: 100px;
+    color: black;
+    font-size: 19px;
+    text-decoration: underline;
+}
+
+.score {
+    position: relative;
+    top: 15px;
+    left: 240px;
+    color: black;
+    font-size: 19px;
+
 }
