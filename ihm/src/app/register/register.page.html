@@ -1,32 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title slot="end">
+    <ion-title slot="start">
       <ion-button size="small" shape="round">
         <ion-icon name="globe-outline"></ion-icon>
-            English
+          English
       </ion-button>      
-    </ion-title>  </ion-toolbar>
+    </ion-title>
+
+    <ion-title color="primary">
+      <img src="assets/icon/icon.png" alt="icon">
+        Total Movies
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
 
 <ion-content [fullscreen]="true">
 
-
   <div class="container-parent">
-    <div class="container-child">
-      <ion-card class= "color">
+      <ion-card class= "icon">
         <img alt="icon" src="assets/icon/totalMovies.png"/>
       </ion-card>
-    </div>
   </div>
   
-  <div class="container-parent">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large">Register</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <div class="text">
+    <p><strong>Bem vindo ao Total Movies</strong></p>
+  </div>
 
+  <div class="container-parent">
     <ion-item>
       <ion-label position="floating">Name</ion-label>
       <ion-input type="email"></ion-input>
@@ -41,16 +42,18 @@
       <ion-label position="floating">Password</ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Type your Password Again</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
   </div>
   
   <div class="container-child">
-    <ion-button expand="full">Register</ion-button>
+    <ion-button expand="full" routerLink="/login">Register</ion-button>
   </div>
+
+  <div class="container-register">
+    <ion-card class="register">
+    <p>Já tem conta?<strong routerLink="/login">Clique aqui</strong></p>
+   </ion-card>
+  </div>
+
 </ion-content>
 
 
