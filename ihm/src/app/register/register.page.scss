@@ -4,8 +4,14 @@
     padding-top: 100px;
 }
 
+.parent-container {
+	display: grid;
+	justify-content: center;
+    padding-top: 25px;
+}
+
 .container-child {
-    padding-top: 65px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
 }
@@ -38,6 +44,14 @@ ion-button {
     color: #5e5e5e;
     font-size: 20px;
     margin-bottom: -70px;
+}
+
+.register-text{
+    display: flex;
+    justify-content: center;
+    color: #FFB660;
+    font-size: 16px;
+    padding-top: 55PX;
 }
 
 .container-register{

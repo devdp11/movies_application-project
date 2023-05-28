@@ -27,26 +27,30 @@
     <p><strong>Bem vindo ao Total Movies</strong></p>
   </div>
 
-  <div class="container-parent">
-    <ion-item>
-      <ion-label position="floating">Name</ion-label>
-      <ion-input type="email"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
+  <div class="register-text">
+    <p><strong>Crie uma conta para acessar à aplicação!</strong></p>
   </div>
+
+  <div class="parent-container">
+    
+    <form [formGroup]="createForm" (ngSubmit)="sendForm()" novalidate>
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email" required></ion-input>
+      </ion-item>
+      
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password" required></ion-input>
+      </ion-item>
+      
+      <div class="container-child">
+        <ion-button strong="true" type="submit" expand="block" [disabled]="createForm.invalid">Registar</ion-button>
+      </div>
+      
+    </form>
+</div> 
   
-  <div class="container-child">
-    <ion-button expand="full" routerLink="/login">Register</ion-button>
-  </div>
 
   <div class="container-register">
     <ion-card class="register">

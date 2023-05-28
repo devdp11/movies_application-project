@@ -24,27 +24,35 @@
   <div class="text">
     <p><strong>Bem vindo ao Total Movies</strong></p>
   </div>
-
-  <div class="container-parent">
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="email"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
+  
+  <div class="login-text">
+    <p><strong>Efetue o login para acessar à aplicação!</strong></p>
   </div>
 
-  <div class="container-child">
-    <ion-button size="big" routerLink="/tabs/tab1">Sign in</ion-button>
-  </div>
+    <div class="parent-container">
+      <form [formGroup]="seeForm" (ngSubmit)="sendForm()" novalidate>
 
-  <div class="container-sign">
-    <ion-card class="sign">
-    <p>Não tem conta?<strong routerLink="/register">Clique aqui</strong></p>
-   </ion-card>
+        <ion-item lines="full">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="email" required></ion-input>
+          </ion-item>
+          
+          <ion-item lines="full">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="password" required></ion-input>
+          </ion-item>
+            
+          <div class="container-child">
+            <ion-button strong="true" type="submit" expand="block" [disabled]="seeForm.invalid">Entrar</ion-button>
+          </div>
+
+
+        <div class="container-sign">
+          <ion-card class="sign">
+          <p>Não tem conta?<strong routerLink="/register">Clique aqui</strong></p>
+        </ion-card>
+        </div>
+      </form>
   </div>
 
 </ion-content>
