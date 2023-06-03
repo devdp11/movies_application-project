@@ -8,8 +8,8 @@
       </ion-button>    
     </ion-title>
 
-    <ion-title slot="end" color="primary">
-      <img src="assets/icon/icon.png" alt="icon">
+    <ion-title slot="end" color="primary" class="logo">
+      <img src="assets/icon/totalMovies.png" alt="icon">
         Total Movies
     </ion-title>
   </ion-toolbar>
@@ -20,7 +20,6 @@
 
   <ion-grid [fixed]="true">
     <ion-row class="scroll">
-        <ion-button size="small" (click)="logout()"><ion-icon name="log-out-outline"></ion-icon>Logout</ion-button>      
         <ion-button size="small">Drama</ion-button>      
         <ion-button size="small">Ação</ion-button>
         <ion-button size="small">Aventura</ion-button>        
@@ -35,7 +34,7 @@
     </ion-row>
   </ion-grid>
   
-  <ion-grid>
+  <ion-grid class="movie-grid">
     <ion-row>
       <ion-col size="3" *ngFor="let movie of dataMovies" class="ion-margin">
         <ion-card button="true" class="board" (click)="goMovie(movie)">

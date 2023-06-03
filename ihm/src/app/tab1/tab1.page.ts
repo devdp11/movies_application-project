@@ -34,27 +34,4 @@ export class Tab1Page implements OnInit {
   goMovie(movie:Movies) {
     this.router.navigate(['/movie', movie.id]);
   }
-
-  async logout() {
-    const alerta = await this.alerta.create({
-      message: 'Tens a certeza que desejas sair da aplicação?',
-      buttons: [
-        {
-          text: 'Não',
-          handler: () => {
-            alerta.dismiss();
-          }
-        },
-        {
-          text: 'Sim',
-          handler: () => {
-            this.router.navigate(['/login']);
-            alerta.dismiss();
-          }
-        }
-      ]
-    });
-    await alerta.present();
-    return;
-  }
 }
