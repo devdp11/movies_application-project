@@ -28,7 +28,7 @@ export class Tab2Page implements OnInit {
   ngOnInit() {
     this.loadMovies();
   }
-
+  // Aqui os filmes são carregados para essa página
   loadMovies(){
     fetch('./assets/data/movies.json')
       .then((response) => response.json())
@@ -43,7 +43,7 @@ export class Tab2Page implements OnInit {
         console.log('error loading movie data |', error);
       });
   }
-
+  // Esta função é accionada quando clicamos no icon de procurar e inicia a verificação da existência de algum filma com a string "search1"
   search(){
     if(this.search1){
       const search = this.search1.toLowerCase();
@@ -64,7 +64,7 @@ export class Tab2Page implements OnInit {
       console.log ('Write an name to search');
     }
   }
-  
+  // Esta função é responsável por clicarmos num filme e sermos redirecionados para a pagina do respetivo filme.
   goMovie(movie:Movies) {
     this.router.navigate(['/movie', movie.id]);
   }

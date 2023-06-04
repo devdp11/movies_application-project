@@ -31,7 +31,7 @@ export class PlaylistsService {
       const storedList = await this.storageInstance.get(this.STORAGE_KEY);
       this.watchLaterList = storedList ? JSON.parse(storedList) : [];
    }
-
+  // Esta função addWatchLaterList serve para adicionar o filme à storage depois de verificar se o filme ainda não existe no storage.
   addWatchLaterList(id: string, title: string, rating:string, release_year: string, genre: string, img: string): Promise<void> {
     return new Promise<void>((resolve) => {
       const existingMovie = this.watchLaterList.find(movie => movie.id === id);
@@ -52,23 +52,22 @@ export class PlaylistsService {
       }
     });
   }
-
+  // A função saveData serve para salvar o filme ao clicar no botão e ser verificado que ainda não existe nenhum no storage. Esta função é chamada pela função addWatchLaterList().
   private async saveData() {
     if (this.storageInstance) {
       await this.storageInstance.set(this.STORAGE_KEY, JSON.stringify(this.watchLaterList));
     }
   }
-
+  // A função getPlaylistMovies() é chamada quando abrimos a pagina TAB3, para procurar se existem "StoredMovies" na storage. 
   async getPlaylistMovies(): Promise<{ id: string, title: string, rating:string, release_year: string, genre: string, img: string }[]> {
     if (!this.storageInstance) {
       await this.initStorage();
     }
-  
     const StoredMovies = this.watchLaterList;
     console.log(StoredMovies);
     return StoredMovies;
   }
-
+  //  Por ultimo, removeMoviesPlaylist() tem a função de remover o filme da storage na TAB3.
   async removeMoviesPlaylist(movie: Movie) {
     if (!this.storageInstance) {
       await this.initStorage();
@@ -80,7 +79,7 @@ export class PlaylistsService {
       console.log('Movie removed from playlist', movie);
     }
   }
-
+  // Esta função para procurar ao clicar no botão "ver mais tarde" se o filme que clicamos ja existe no storage através do seu ID.
   checkIfMovieExists(id: string): Promise<boolean> {
     return new Promise<boolean>((resolve) => {
       const existingMovie = this.watchLaterList.find(movie => movie.id === id);

@@ -27,7 +27,7 @@ export class Tab3Page implements OnInit{
   ngOnInit() {
     this.loadWatchLaterMovies();
   }
-
+  // Esta função serve para carregar os filmes que estão guardados na storage nesta página.
   async loadWatchLaterMovies() {
     try {
       this.watchLaterMovies = await this.playListService.getPlaylistMovies();
@@ -36,7 +36,7 @@ export class Tab3Page implements OnInit{
       console.error('Error getting the movies":', error);
     }
   }
-
+  // Serve para remover o movie, chamando a função presente no service playlists
   async removeMovie(movie: Movie) {
     try {
       console.log('Movie removed', movie);
@@ -68,7 +68,7 @@ export class Tab3Page implements OnInit{
       console.error('Error removing the movie', error);
     }
   }
-
+  // Serve para adicionar filmes à storage e dar load desses filmes nesta página
   async addMovies(id: string, title: string, rating: string, release_year: string, genre: string, img: string) {
     try {
       await this.playListService.addWatchLaterList(id, title, rating, release_year, genre, img);
@@ -83,26 +83,3 @@ export class Tab3Page implements OnInit{
     this.router.navigate(['/movie', movie.id]);
   }
 }
-
-/* async logout() {
-  const alerta = await this.alerta.create({
-    message: 'Tens a certeza que desejas sair da aplicação?',
-    buttons: [
-      {
-        text: 'Não',
-        handler: () => {
-          alerta.dismiss();
-        }
-      },
-      {
-        text: 'Sim',
-        handler: () => {
-          this.router.navigate(['/login']);
-          alerta.dismiss();
-        }
-      }
-    ]
-  });
-  await alerta.present();
-  return;
-} */
